@@ -10,15 +10,32 @@ var connection = mysql.createConnection({
 })
 
 connection.connect()
-app.get('/', function(req, res){
-    console.log('Request to /')
-    connection.query('SELECT * FROM shops WHERE shop_id=1', function (err, rows, fields) {
-        if (err) throw err
-        const queryResult = `Shop_id: ${rows[0].shop_id}<br>
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+app.get('/search', function(req, res){
+    console.log('Request to /search', req.query.query)
+    console.log(`SELECT * FROM shops WHERE shop_name LIKE '%${req.query.query}%'`)
+    connection.query(`SELECT * FROM shops WHERE shop_name LIKE '%${req.query.query}%'`, function (err, rows, fields) {
+        if (err) {
+            console.log('errrrrr')
+            res.status(404)
+            res.send( err.message )
+        }else if( rows.length > 0 ){
+            console.log('result:', rows)
+            const queryResult = `Shop_id: ${rows[0].shop_id}<br>
                   Shop_name: ${rows[0].shop_name}<br>
                   Shop_speciality: ${rows[0].shop_speciality}<br>`
-        console.log(queryResult)
-        res.send(queryResult)
+            console.log(rows)
+            res.send(rows)
+        }else {
+            res.status(404)
+            res.send('no results')
+        }
     })
 
 })
