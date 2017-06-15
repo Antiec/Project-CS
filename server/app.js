@@ -40,6 +40,6 @@ app.get('/search', function(req, res){
 
 })
 
-app.listen(3000)
-console.log('Server listening at port 3000')
+app.listen(1337)
+console.log('Server listening at port 1337')
 //connection.end()
