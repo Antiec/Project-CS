@@ -19,7 +19,7 @@ const coffeeList = [
 ]
 
 const DEFAULT_QUERY = '';
-const PATH_BASE = 'http://localhost:1337';
+const PATH_BASE = 'http://52.59.225.168:1337';
 const PATH_SEARCH = '/search';
 const PARAM_SEARCH = 'query=';
 
