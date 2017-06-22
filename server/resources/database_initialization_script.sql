@@ -7,7 +7,6 @@ CREATE TABLE shops (
     creation_date DATE,
     PRIMARY KEY ( shop_id )
 );
-
 INSERT INTO shops ( 
 	shop_name, 
     shop_owner, 
