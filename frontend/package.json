@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.4",
+    "proptypes": "^1.1.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-preset-es2017": "^6.24.1",
+    "enzyme": "^2.8.2",
     "eslint": "^4.0.0",
     "eslint-config-react-app": "^1.0.4",
     "eslint-plugin-flowtype": "^2.34.0",
@@ -16,7 +19,9 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-jsx-import": "0.0.1",
     "eslint-plugin-react": "^7.1.0",
-    "react-scripts": "1.0.7"
+    "react-addons-test-utils": "^15.6.0",
+    "react-scripts": "1.0.7",
+    "react-test-renderer": "^15.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
