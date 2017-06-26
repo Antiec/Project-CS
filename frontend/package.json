@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
     "lodash": "^4.17.4",
+    "node-pre-gyp": "0.6.36",
+    "prop-types": "^15.5.10",
     "proptypes": "^1.1.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
@@ -12,7 +16,6 @@
     "babel-eslint": "^7.2.3",
     "babel-preset-es2017": "^6.24.1",
     "enzyme": "^2.8.2",
-    "eslint": "^4.0.0",
     "eslint-config-react-app": "^1.0.4",
     "eslint-plugin-flowtype": "^2.34.0",
     "eslint-plugin-import": "^2.3.0",
